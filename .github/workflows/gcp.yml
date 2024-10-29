@@ -31,5 +31,5 @@ jobs:
           docker build . -t europe-central2-docker.pkg.dev/gcp-playground-440117/playground
           docker push europe-central2-docker.pkg.dev/gcp-playground-440117/playground
 
-      - name: Push image
-        run: docker push europe-central2-docker.pkg.dev/gcp-playground-440117/playground
+#      - name: Push image
+#        run: docker push europe-central2-docker.pkg.dev/gcp-playground-440117/playground
