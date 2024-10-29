@@ -27,9 +27,8 @@ jobs:
 
       - name: Check Artifact Registry
         run: |
-          gcloud auth configure-docker europe-docker.pkg.dev
+          gcloud auth configure-docker europe-central2-docker.pkg.dev
           docker build . -t europe-central2-docker.pkg.dev/gcp-playground-440117/playground
-          docker push europe-central2-docker.pkg.dev/gcp-playground-440117/playground
 
-#      - name: Push image
-#        run: docker push europe-central2-docker.pkg.dev/gcp-playground-440117/playground
+      - name: Push image
+        run: docker push europe-central2-docker.pkg.dev/gcp-playground-440117/playground
