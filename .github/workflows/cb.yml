@@ -28,6 +28,5 @@ jobs:
       - name: Authenticate Docker
         run: gcloud auth configure-docker europe-central2-docker.pkg.dev
 
-
       - name: Tag image
-        run: docker tag europe-central2-docker.pkg.dev/gcp-playground-440117/playground/image-123:youtube europe-central2-docker.pkg.dev/gcp-playground-440117/playground/image-123:dupa
+        run: gcloud artifacts docker tags add europe-central2-docker.pkg.dev/gcp-playground-440117/playground/image-123:cloudbuild europe-central2-docker.pkg.dev/gcp-playground-440117/playground/image-123:dupa
