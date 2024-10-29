@@ -1,8 +1,7 @@
-name: GCP
+name: CB
 
 on:
-  workflow_dispatch:
-#  push:
+  push:
 
 jobs:
   build-push-docker:
@@ -23,17 +22,8 @@ jobs:
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
 
+      - name: Build and push image
+        run: gcloud builds submit .
+
       - name: Authenticate Docker
         run: gcloud auth configure-docker europe-central2-docker.pkg.dev
-
-      - name: Set up buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Build & push
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          tags: europe-central2-docker.pkg.dev/gcp-playground-440117/playground/image-123:youtube
-          cache-from: type=gha
-          cache-to: type=gha,mode=max

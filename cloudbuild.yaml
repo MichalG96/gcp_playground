@@ -1,12 +1,12 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: [ 'build', '-t', 'europe-central2-docker.pkg.dev/gcp-playground-440117/playground', '.' ]
+    args: [ 'build', '-t', 'europe-central2-docker.pkg.dev/gcp-playground-440117/playground/image-123:cloudbuild', '.' ]
 
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       "push",
-      "europe-central2-docker.pkg.dev/gcp-playground-440117/playground",
+      "europe-central2-docker.pkg.dev/gcp-playground-440117/playground/image-123:cloudbuild",
     ]
-serviceAccount: 'projects/gcp-playground-440117/serviceAccounts/cloud-build-mg@gcp-playground-440117.iam.gserviceaccount.com'
+serviceAccount: 'projects/gcp-playground-440117/serviceAccounts/sa-3-775@gcp-playground-440117.iam.gserviceaccount.com'
 options:
   logging: NONE
