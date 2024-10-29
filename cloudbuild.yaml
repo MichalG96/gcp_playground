@@ -8,3 +8,5 @@ steps:
       "europe-central2-docker.pkg.dev/gcp-playground-440117/playground",
     ]
 serviceAccount: 'projects/gcp-playground-440117/serviceAccounts/cloud-build-mg@gcp-playground-440117.iam.gserviceaccount.com'
+options:
+  logging: NONE
