@@ -18,8 +18,5 @@ jobs:
         tag: 1.0.0
         git_user: github-actions # Optional
         git_email: github-actions@github.com # Optional
-        main_branch: master # Optional
-        develop_branch: develop # Optional
-        allow_empty_releases: false # Optional
-        ignore_commits_from_author: johndoe # Optional
-        ignore_commits_grep: [skip] # Optional
+        main_branch: main # Optional
+        develop_branch: dev # Optional
