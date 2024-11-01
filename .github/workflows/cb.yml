@@ -1,7 +1,8 @@
 name: CB
 
 on:
-  push:
+  workflow_dispatch:
+#  push:
 
 jobs:
   build-push-docker:
