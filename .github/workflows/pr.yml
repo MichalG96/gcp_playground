@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: HDBandit/gitflow-release-action@2.0.10
+      - uses: HDBandit/gitflow-release-action@1.0.1
         with:
           command: start_finish
           tag: 1.0.0
