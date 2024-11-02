@@ -5,9 +5,9 @@ on:
         type: string
         required: true
         description: "Version to release"
-#  pull_request:
-#    types:
-#      - closed
+  pull_request:
+    types:
+      - closed
 
 name: Release
 
