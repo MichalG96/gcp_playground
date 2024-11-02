@@ -1,0 +1,22 @@
+name: Hdbandit release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        required: true
+        description: "Version to release"
+#  pull_request:
+jobs:
+  hdb_release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: HDBandit/gitflow-release-action@1.0.1
+      with:
+        command: start_finish
+        tag: 1.0.0
+        git_user: github-actions # Optional
+        git_email: github-actions@github.com # Optional
+        main_branch: main # Optional
+        develop_branch: dev # Optional
