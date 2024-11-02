@@ -5,9 +5,9 @@ on:
         type: string
         required: true
         description: "Version to release"
-#  pull_request:
-#    types:
-#      - closed
+  pull_request:
+    types:
+      - closed
 
 name: Release
 
@@ -20,7 +20,7 @@ jobs:
         with:
           develop_branch: "dev"
           main_branch: "main"
-          merge_back_from_main: false
+          merge_back_from_main: true
           version: ${{ inputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
